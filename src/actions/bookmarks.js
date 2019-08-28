@@ -8,6 +8,7 @@ export const createBookmark = (bookmark) => ({
 });
 
 export const startCreateBookmark = (bookmarkData = {}) => {
+    console.log('test');
     return (dispatch) => {
      const {
          title = '',
