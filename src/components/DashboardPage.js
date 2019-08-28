@@ -2,7 +2,10 @@ import React from 'react';
 
 const DashboardPage = () => (
   <div>
-    Dashboard page content
+    <h1>
+        This is where my bookmarks will go!
+    </h1>
+    
   </div>
 );
 
