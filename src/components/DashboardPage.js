@@ -1,11 +1,9 @@
 import React from 'react';
+import BookmarkForm from './BookmarkForm';
 
 const DashboardPage = () => (
   <div>
-    <h1>
-        This is where my bookmarks will go!
-    </h1>
-    
+    <BookmarkForm />
   </div>
 );
 
