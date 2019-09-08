@@ -1,6 +1,4 @@
-import React from 'react'
-import { connect } from 'react-redux';
-import { startCreateBookmark } from '../actions/bookmarks';
+import React from 'react';
 
 export class BookmarkForm extends React.Component {
     constructor(props) {
@@ -42,7 +40,7 @@ export class BookmarkForm extends React.Component {
         this.setState(() => ({ error: 'Please provide title, url, and category.' }));
       } else {
         this.setState(() => ({ error: '' }));
-        this.props.startCreateBookmark({
+        this.props.onSubmit({
           title: this.state.title,
           description: this.state.description,
           url: this.state.url,
@@ -88,8 +86,4 @@ export class BookmarkForm extends React.Component {
     }
   }
 
-  const mapDispatchToProps = (dispatch, props) => ({
-    startCreateBookmark: (bookmark) => dispatch(startCreateBookmark(bookmark))
-  });
-
-  export default connect(undefined, mapDispatchToProps)(BookmarkForm);
+  export default BookmarkForm;
